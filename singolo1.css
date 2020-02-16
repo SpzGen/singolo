@@ -1,0 +1,86 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --terrakot: #f06c64;
+    --darkblue: #2d303a;
+    --ddarkblue: #323746;
+}
+
+  
+body {
+    margin: 0;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+  
+.main-header {
+    height: 89px;
+    background-color: var(--darkblue);
+}
+
+.main-header > .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 40px;
+    font-size: 25px;
+    line-height: 89px;   
+    color: var(--white);
+    font-family: "Lato";
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span:last-child {
+    color: var(--terrakot)
+}
+
+.main-nav {
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    padding-right: 40px;
+}
+
+.main-nav > ul {
+    display: flex;
+}
+
+.main-nav > ul > li {
+    list-style-type: none;
+}
+
+.main-nav > ul > li > a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 6px;
+    color: var(--white);
+    font-family: "Lato";
+    font-weight: 700;
+    text-align: left;
+
+}
+
+.main-nav > ul > li > span {
+    font-size: 12px;
+    color: var(--ddarkblue);
+    padding: 0 14px;
+}
+
+
+.hr {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--ddarkblue);
+    display: block;
+    height: 6px;
+    border: 0;
+}

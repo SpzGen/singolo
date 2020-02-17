@@ -1,7 +1,9 @@
 :root {
     --black: #000000;
     --white: #ffffff;
+    --dwhite: #f2f2f2;
     --terrakot: #f06c64;
+    --dterrakot: #ea676b;
     --darkblue: #2d303a;
     --ddarkblue: #323746;
 }
@@ -29,7 +31,7 @@ body {
 }
 
 .logo {
-    padding-left: 40px;
+    margin-left: 40px;
     font-size: 25px;
     line-height: 89px;   
     color: var(--white);
@@ -47,6 +49,7 @@ body {
     margin-left: auto;
     text-transform: uppercase;
     padding-right: 40px;
+    padding-top: 8px;
 }
 
 .main-nav > ul {
@@ -65,15 +68,19 @@ body {
     font-family: "Lato";
     font-weight: 700;
     text-align: left;
+}
 
+.main-nav > ul > li > .active-nav {
+    color: var(--terrakot);
+    cursor: default;
 }
 
 .main-nav > ul > li > span {
     font-size: 12px;
     color: var(--ddarkblue);
     padding: 0 14px;
+    user-select: none;
 }
-
 
 .hr {
     padding: 0;
@@ -83,4 +90,45 @@ body {
     display: block;
     height: 6px;
     border: 0;
+}
+
+.slider {
+    height: 600px;
+    background-color: var(--terrakot);
+    border-bottom: 6px solid var(--dterrakot);
+    box-sizing: border-box;
+}
+
+.slider > .container {
+    display: flex;
+    align-items: center;
+}
+
+.slider > .container > .chev-h {
+    height: 27px;
+    margin: 53px 54px 0 42px;
+}
+
+.slider > .container > .iPhone-v {
+    margin-top: 53px;
+
+}
+
+.slider > .container > .iPhone-h {
+    margin-top: 53px;
+    margin-left: 73px;
+}
+
+.slider > .container > .chev-r {
+    height: 27px;
+    margin: 53px 40px 0 54px;
+}
+
+
+
+.service {
+    height: 500px;
+    background-color: var(--dwhite);
+    border-bottom: 6px solid var(--white);
+    box-sizing: border-box;
 }

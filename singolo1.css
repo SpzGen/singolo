@@ -6,6 +6,7 @@
     --dterrakot: #ea676b;
     --darkblue: #2d303a;
     --ddarkblue: #323746;
+    --gray: #666d89;
 }
 
   
@@ -33,10 +34,12 @@ body {
 .logo {
     margin-left: 40px;
     font-size: 25px;
-    line-height: 89px;   
+    line-height: 89px;
+    font-stretch: semi-condensed;
     color: var(--white);
     font-family: "Lato";
-    font-weight: 700;
+    margin-top: -1px;
+    letter-spacing: -0.5px;
     text-decoration: none;
 }
 
@@ -50,6 +53,7 @@ body {
     text-transform: uppercase;
     padding-right: 40px;
     padding-top: 8px;
+
 }
 
 .main-nav > ul {
@@ -66,8 +70,9 @@ body {
     line-height: 6px;
     color: var(--white);
     font-family: "Lato";
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
+    letter-spacing: -0.5px;
 }
 
 .main-nav > ul > li > .active-nav {
@@ -76,7 +81,7 @@ body {
 }
 
 .main-nav > ul > li > span {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--ddarkblue);
     padding: 0 14px;
     user-select: none;
@@ -115,20 +120,65 @@ body {
 }
 
 .slider > .container > .iPhone-h {
-    margin-top: 53px;
+    margin-top: 52px;
     margin-left: 73px;
 }
 
 .slider > .container > .chev-r {
     height: 27px;
-    margin: 53px 40px 0 54px;
+    margin: 53px 40px 0 55px;
 }
-
-
 
 .service {
     height: 500px;
     background-color: var(--dwhite);
     border-bottom: 6px solid var(--white);
     box-sizing: border-box;
+}
+
+.service > .container > .Service-head {
+    margin: 0;
+    line-height: 22px;
+    padding: 67px 0 0 40px;
+    font-size: 30px;
+    color: var(--gray);
+    font-weight: 900;
+    text-align: left;
+}
+
+.service > .container > .Service-text {
+    margin: 25px 0 49px 41px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    color: var(--gray);
+    width: 940px;
+    height: 57px;
+    text-align: justify;
+}
+
+.service > .container > .features {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 40px 20px;
+    margin: 0 41px 0 41px;
+    align-items: center;
+}
+
+.service > .container > .features > .skill {
+    height: 84px;
+    background-color: var(--black);
+}
+
+.service > .container > .features > .skill button {
+    height: 59px;
+    width: 59px;
+    border-radius: 50%;
+    cursor: default;
+    outline: none;
+    border: 2px solid var(--gray);
+
+}
+.service > .container > .features > .skill .button .img{
+    align-items: center;
 }

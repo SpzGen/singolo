@@ -53,9 +53,8 @@ body {
 }
 
 .portfolio > .container > .button-array {
-    padding-top: 10px;
+    padding-top: 9px;
     padding-left: 40px;
-    padding-bottom: 19px;
 }
 
 .portfolio > .container > .button-array > button {
@@ -78,16 +77,19 @@ body {
 }
 
 .portfolio > .container > .gallery {
+    padding-top: 19px;
     display: grid;
     grid-template:  repeat(3, 187px)/repeat(4, 220px);
     grid-gap: 20px 20px;
     justify-content: center;
+    max-height: 611px;
+    overflow: hidden;
 }
 
 .portfolio > .container > .gallery > a > img:hover {
     opacity: 0.8;
     cursor: pointer;
-    filter: drop-shadow(0px 0px 5px var(--dwhite))
+    filter: drop-shadow(0 0 5px var(--dwhite))
 }
 
 .about_us {
@@ -97,7 +99,7 @@ body {
 }
 
 .about_us > .container > .about_us_head {
-    padding-top: 69px;
+    padding-top: 68px;
     padding-left: 40px;
     font-size: 30px;
     line-height: 18px;
@@ -133,6 +135,8 @@ body {
     font-weight: 900;
     color: var(--gray);
     letter-spacing: 0.2px;
+    white-space:nowrap;
+    overflow: hidden;
 }
 
 .about_us > .container > .about_us_we > .about_us_we1 > .about_us_we_text {
@@ -147,7 +151,7 @@ body {
 }
 
 .about_us > .container > .about_us_we > .about_us_we1 > a > .about_us_we_web {
-    padding-top: 22px;
+    padding-top: 21px;
     padding-right: 3px;
 }
 

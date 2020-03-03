@@ -1,0 +1,142 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --dwhite: #f2f2f2;
+    --wwhite: #f0d8d9;
+    --twhite: #f48c8f;
+    --terrakot: #f06c64;
+    --dterrakot: #ea676b;
+    --wterrakot: #d6564f;
+    --darkblue: #2d303a;
+    --ddarkblue: #323746;
+    --ldarkblue: #767e9e;
+    --gray: #666d89;
+    --cbbutton: #c5c5c5;
+    --ctbutton: #dedede;
+}
+
+::-webkit-input-placeholder {color: var(--twhite); opacity:1;}/* webkit */
+::-moz-placeholder          {color: var(--twhite); opacity:1;}/* Firefox 19+ */
+:-moz-placeholder           {color: var(--twhite); opacity:1;}/* Firefox 18- */
+:-ms-input-placeholder      {color: var(--twhite); opacity:1;}/* IE */
+
+body {
+    margin: 0;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+.contact {
+    height: 648px;
+    background-color: var(--terrakot);
+    border-bottom: 6px solid var(--dterrakot);
+}
+
+.contact > .container > .contact-head {
+    padding-top: 69px;
+    padding-left: 40px;
+    font-size: 30px;
+    line-height: 15px;
+    color: var(--wwhite);
+    font-family: "Lato";
+    font-weight: 900;
+    letter-spacing: 0.4px;
+}
+
+.contact > .container > .contact-text {
+    padding-top: 30px;
+    padding-left: 40px;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--wwhite);
+    font-family: "Lato";
+    letter-spacing: -0.06px;
+}
+
+.contact > .container > .contact-space {
+    display: grid;
+    grid-template-columns: 620px 300px;
+    grid-column-gap: 20px; 
+    padding-top: 43px;
+    padding-left: 40px;
+}
+
+.contact > .container > .contact-space > .contact-fields > input {
+    width: 604px;
+    margin-bottom: 16px;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--wterrakot);    
+}
+
+input[type="text"] { 
+    font-size: 12px;
+    padding-left: 15px;
+    font-family: "Lato";
+    font-weight: 400;
+    color: var(--wwhite);
+}
+
+.contact > .container > .contact-space > .contact-fields > textarea {
+    width: 589px;
+    margin-bottom: 16px;
+    height: 177px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--wterrakot);
+    resize: none;
+}
+
+textarea[type="text"] { 
+    font-size: 12px;
+    padding: 10px 15px 15px 15px;
+    font-family: "Lato";
+    font-weight: 400;
+    color: var(--wwhite);
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-head {
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--wwhite);
+    font-family: "Lato";
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text {
+    margin-top: 10px;
+    width: 300px;
+    height: 175px;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--wwhite);
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: justify;
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text > .coord {
+    margin-top: 20px;
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text > .coord > p {
+    margin-bottom: -13px;
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text > .coord > p > a {
+    color: var(--wwhite);
+    font-family: "Lato";
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text > .coord > p > a > img {
+    margin-right: 11px;
+    margin-top: 1px;
+}

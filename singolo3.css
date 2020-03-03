@@ -140,3 +140,7 @@ textarea[type="text"] {
     margin-right: 11px;
     margin-top: 1px;
 }
+
+.contact > .container > .contact-space > .contact-info > .contact-info-text > .coord > p > a:hover {
+    text-decoration: underline;
+}

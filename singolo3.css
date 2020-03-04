@@ -82,6 +82,14 @@ input[type="text"] {
     color: var(--wwhite);
 }
 
+input[type="email"] { 
+    font-size: 12px;
+    padding-left: 15px;
+    font-family: "Lato";
+    font-weight: 400;
+    color: var(--wwhite);
+}
+
 .contact > .container > .contact-space > .contact-fields > textarea {
     width: 589px;
     margin-bottom: 16px;

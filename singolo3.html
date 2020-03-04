@@ -15,12 +15,14 @@
             <div class="contact-head">Get a Quote</div>
             <div class="contact-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
             <div class="contact-space">
-                <div class="contact-fields">
-                    <input name='contact-Name' type="text" placeholder="Name (Required)"></label>
-                    <input name='contact-Email' type="email" placeholder="Email (Required)"></label>
-                    <input name='contact-Subject' type="text" placeholder="Subject"></label>
-                    <textarea name="contact-comment" type="text" cols="40" rows="3" placeholder="Describe your project in detail..."></textarea>
-                </div>
+                <form class="contact-fields" action="singolo1.html" method="POST" target="_blank">
+                    <input id='contact-name' name='contact-name' type="text" placeholder="Name (Required)" required></label>
+                    <input id='contact-email' name='contact-email' type="email" placeholder="Email (Required)" required></label>
+                    <input id='contact-subject' name='contact-subject' type="text" placeholder="Subject"></label>
+                    <textarea id="contact-comment" name="contact-comment" type="text" cols="40" rows="3" placeholder="Describe your project in detail..."></textarea>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
                 <div class="contact-info">
                     <div class="contact-info-head">Contact Information</div>
                     <div class="contact-info-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.

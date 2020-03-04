@@ -65,16 +65,13 @@ body {
     padding-left: 40px;
 }
 
-.contact > .container > .contact-space > .contact-fields > input {
+.contact > .container > .contact-space > .contact-fields > input[type="text"], input[type="email"] {
     width: 604px;
     margin-bottom: 16px;
     height: 36px;
     border-radius: 5px;
     border: none;
-    background-color: var(--wterrakot);    
-}
-
-input[type="text"] { 
+    background-color: var(--wterrakot);
     font-size: 12px;
     padding-left: 15px;
     font-family: "Lato";
@@ -82,7 +79,7 @@ input[type="text"] {
     color: var(--wwhite);
 }
 
-.contact > .container > .contact-space > .contact-fields > textarea {
+.contact > .container > .contact-space > .contact-fields > textarea[type="text"] {
     width: 589px;
     margin-bottom: 16px;
     height: 177px;
@@ -90,14 +87,24 @@ input[type="text"] {
     border: none;
     background-color: var(--wterrakot);
     resize: none;
-}
-
-textarea[type="text"] { 
     font-size: 12px;
     padding: 10px 15px 15px 15px;
     font-family: "Lato";
     font-weight: 400;
     color: var(--wwhite);
+}
+
+.contact > .container > .contact-space > .contact-fields > input[type="submit"], input[type="reset"] {
+    width: 155px;
+    height: 35px;
+    margin-left: 100px;
+    border-radius: 5px;
+    background-color: var(--wterrakot);
+    font-size: unset;
+    color: var(--wwhite);
+    font-family: "Lato";
+    font-weight: 700;
+    outline: none;
 }
 
 .contact > .container > .contact-space > .contact-info > .contact-info-head {

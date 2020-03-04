@@ -52,7 +52,7 @@ body {
     margin-left: auto;
     text-transform: uppercase;
     padding-right: 40px;
-    padding-top: 8px;
+    padding-top: 7px;
 }
 
 .main-nav > ul {
@@ -61,6 +61,17 @@ body {
 
 .main-nav > ul > li {
     list-style-type: none;
+}
+
+.main-nav > ul > li:not(:last-child):after {
+    position: relative;
+    bottom: 1px;
+    content: '•';
+    font-size: 5px;
+    text-align: center;
+    color: #494e62;
+    padding: 0 14.9px 0 14.9px;
+    user-select: none;
 }
 
 .main-nav > ul > li > a {
@@ -77,13 +88,6 @@ body {
 .main-nav > ul > li > .active-nav {
     color: var(--terrakot);
     cursor: default;
-}
-
-.main-nav > ul > li > span {
-    font-size: 16px;
-    color: var(--ddarkblue);
-    padding: 0 14px;
-    user-select: none;
 }
 
 .hr {
@@ -160,27 +164,18 @@ body {
 
 .service > .container > .features {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-gap: 37px 20px;
-    margin: 0 41px 0 41px;
+    grid-template-columns: 300px 301px 300px;
+    grid-gap: 37px 19px;
+    margin: 0 40px 0 41px;
 }
 
 .service > .container > .features > .skill {
     display: grid;
     grid-template-columns: 80px auto;
-    height: 85px;
-}
-
-.service > .container > .features > .skill  .sh {
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
-    border: 2px solid var(--gray);
-    text-align: center;
+    height: 86px;
 }
 
 .service > .container > .features > .skill > .sh > .service-img {
-    margin-top: 11px;
     pointer-events: none;
 }
 

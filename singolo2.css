@@ -66,9 +66,11 @@ body {
     font-family: "Lato";
     font-weight: 400;
     color: var(--ldarkblue);
-    margin-right: 10px;
+    margin-right: 6px;
     letter-spacing: -0.3px;
     outline: none;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 .portfolio > .container > .button-array > button:hover {

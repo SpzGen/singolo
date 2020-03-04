@@ -151,3 +151,46 @@ body {
 .contact > .container > .contact-space > .contact-info > .contact-info-text > .coord > p > a:hover {
     text-decoration: underline;
 }
+
+.contact > .container > .contact-space > .contact-fields > input[type="submit"]:hover, input[type="reset"]:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px var(--dwhite))
+}
+
+
+.footer {
+    background-color: var(--darkblue);
+}
+
+.footer > .container {
+    display: flex;
+    height: 76px;
+}
+
+
+.footer > .container > .footer_pravo {
+    display: flex;
+    align-items: center;
+    margin-top: -1px;
+    margin-left: 42px;
+    font-size: 12px;
+    letter-spacing: -0.1px;
+    color: var(--gray);
+}
+
+.footer > .container > .footer-about_us_we_web  {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    margin-right: 39px;
+    margin-top: 2px;
+}
+
+.footer > .container > .footer-about_us_we_web > a {
+    margin-left: 6px;
+}
+
+.footer > .container > .footer-about_us_we_web > a:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 1px var(--dwhite))
+}

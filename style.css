@@ -357,7 +357,7 @@ body {
     line-height: 21px;
     font-family: "Lato";
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
     color: var(--gray);
     letter-spacing: -0.08px;
 }
@@ -391,13 +391,13 @@ body {
 }
 
 .contact > .container > .contact-text {
-    padding-top: 30px;
-    padding-left: 40px;
+    padding: 30px 40px 0 40px;
     font-size: 18px;
     line-height: 30px;
     color: var(--wwhite);
     font-family: "Lato";
-    letter-spacing: -0.06px;
+    letter-spacing: -0.22px;
+    text-align: justify;
 }
 
 .contact > .container > .contact-space {

@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header" id="active-nav">
         <div class="container">
             <h1><a class="logo" href="#"><span>SINGOLO</span><span>*</span></a></h1>
             <nav class="main-nav">
-                <ul>
-                    <li><a class="active-nav" href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="menu">
+                    <li><a class="active-nav" href="#active-nav">Home</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="service">
+    <div class="service" id="Services">
         <div class="container">
             <h1 class="Service-head">Our Services</h1>
             <p class="Service-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -123,7 +123,7 @@
         </div>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio" id="Portfolio">
         <div class="container">
             <div class="portfolio-head">Portfolio</div>
             <div class="portfolio-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -150,7 +150,7 @@
             </div>
         </div>
     </div>
-    <div class="about_us">
+    <div class="about_us" id="About">
         <div class="container">
             <div class="about_us_head">About Us</div>
             <div class="about_us_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -191,14 +191,14 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="Contact">
         <div class="container">
             <div class="contact-head">Get a Quote</div>
             <div class="contact-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
                 cursus commodo, tortor mauris condimentum nibh.</div>
             <div class="contact-space">
-                <form class="contact-fields" action="singolo1.html" method="POST" target="_blank">
+                <form class="contact-fields" action="" method="POST" target="_parent">
                     <input id='contact-name' name='contact-name' type="text" placeholder="Name (Required)"
                         required></label>
                     <input id='contact-email' name='contact-email' type="email" placeholder="Email (Required)"
@@ -206,7 +206,7 @@
                     <input id='contact-subject' name='contact-subject' type="text" placeholder="Subject"></label>
                     <textarea id="contact-comment" name="contact-comment" type="text" cols="40" rows="3"
                         placeholder="Describe your project in detail..."></textarea>
-                    <input type="submit" value="Submit">
+                    <input id="submit-button" type="submit" value="Submit">
                     <input type="reset" value="Reset">
                 </form>
                 <div class="contact-info">
@@ -235,6 +235,18 @@
             </div>
         </div>
     </div>
+
+    <div id="message-block" class="hidden">
+        <div id="message">
+            <p>Уважаемый (ая) <span id="result_name"></span> письмо отправлено</p>
+            <p>Тема: <span id="result_subject"></span></p>
+            <p>Описание: <span id="result_comment"></span></p>  
+            <button id="close-button">OK</button>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@
             <h1><a class="logo" href="#"><span>SINGOLO</span><span>*</span></a></h1>
             <nav class="main-nav">
                 <ul id="menu">
-                    <li><a class="active-nav" href="#active-nav">Home</a></li>
+                    <li><a href="#home" class="active-nav" href="#active-nav">Home</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#Portfolio">Portfolio</a></li>
                     <li><a href="#About">About</a></li>
@@ -24,14 +24,25 @@
             </nav>
         </div>
     </header>
-    <hr class="hr" noshade>
+    <hr class="hr" id="home" noshade>
 
-    <div class="slider">
+    <div class="slider" id="slider">
         <div class="container">
-            <img class="chev-h" src="assets/chev-h.png" alt="chev">
-            <img class="iPhone-v" src="assets/iPhone-v.png" alt="iPhone-v">
-            <img class="iPhone-h" src="assets/iPhone-H.png" alt="iPhone-H">
-            <img class="chev-r" src="assets/chev-r.png" alt="cher">
+            <a onclick="Click_b(-1)"><img class="chev-h" src="assets/chev-h.png" alt="chev"></a>
+            <a onclick="Click_b(1)"><img class="chev-r" src="assets/chev-r.png" alt="cher"></a>
+            <div class="slide">
+                <img class="Screen-v" src="assets/Screen-v.png" alt="Screen-v">
+                <img class="Screen-h" src="assets/Screen-h.png" alt="Screen-h">
+                <img class="iPhone-v" src="assets/iPhone-v.png" alt="iPhone-v">
+                <img class="iPhone-h" src="assets/iPhone-H.png" alt="iPhone-H">
+                <a onclick="button_IPhone(1)"><img class="button-IPhone" src="assets/button.png" alt="button-IPhone"></a>
+                <a onclick="button_IPhone(2)"><img class="button-IPhone2" src="assets/button.png" alt="button-IPhone2"></a>
+            </div>
+            <div class="slide" style="display: none;">
+                <img class="slider2-iPhone-l" src="assets/slider-content.png" alt="slider-content">
+                <img class="slider2-iPhone-r" src="assets/slider-content-1.png" alt="slider-content-1">
+                <img class="slider2-iPhone-c" src="assets/slider-content-2.png" alt="slider-content-2">
+            </div>
         </div>
     </div>
 
@@ -128,25 +139,25 @@
             <div class="portfolio-head">Portfolio</div>
             <div class="portfolio-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
                 odio sem nec elit.</div>
-            <div class="button-array">
+            <div class="button-array" id="button-array">
                 <button id="button-All" name="button-All">All</button>
                 <button id="button-Web_Design" name="button-Web_Design">Web Design</button>
                 <button id="button-Graphic_Design" name="button-Graphic_Design">Graphic Design</button>
                 <button id="button-Artwork" name="button-Artwork">Artwork</button>
             </div>
-            <div class="gallery">
-                <a href="#"><img class="gallely-foto" src="assets/g1.png" alt="gallery1"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g2.png" alt="gallery2"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g3.png" alt="gallery3"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g4.png" alt="gallery4"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g5.png" alt="gallery5"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g6.png" alt="gallery6"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g7.png" alt="gallery7"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g8.png" alt="gallery8"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g9.png" alt="gallery9"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g10.png" alt="gallery10"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g11.png" alt="gallery11"></a>
-                <a href="#"><img class="gallely-foto" src="assets/g12.png" alt="gallery12"></a>
+            <div class="gallery" id='gallery_array'>
+                <a><img class="gallery-foto" id='foto1' src="assets/g1.png" alt="gallery1"></a>
+                <a><img class="gallery-foto" id='foto2' src="assets/g2.png" alt="gallery2"></a>
+                <a><img class="gallery-foto" id='foto3' src="assets/g3.png" alt="gallery3"></a>
+                <a><img class="gallery-foto" id='foto4' src="assets/g4.png" alt="gallery4"></a>
+                <a><img class="gallery-foto" id='foto5' src="assets/g5.png" alt="gallery5"></a>
+                <a><img class="gallery-foto" id='foto6' src="assets/g6.png" alt="gallery6"></a>
+                <a><img class="gallery-foto" id='foto7' src="assets/g7.png" alt="gallery7"></a>
+                <a><img class="gallery-foto" id='foto8' src="assets/g8.png" alt="gallery8"></a>
+                <a><img class="gallery-foto" id='foto9' src="assets/g9.png" alt="gallery9"></a>
+                <a><img class="gallery-foto" id='foto10' src="assets/g10.png" alt="gallery10"></a>
+                <a><img class="gallery-foto" id='foto11' src="assets/g11.png" alt="gallery11"></a>
+                <a><img class="gallery-foto" id='foto12' src="assets/g12.png" alt="gallery12"></a>
             </div>
         </div>
     </div>
@@ -205,8 +216,8 @@
                         required></label>
                     <input id='contact-subject' name='contact-subject' type="text" placeholder="Subject"></label>
                     <textarea id="contact-comment" name="contact-comment" type="text" cols="40" rows="3"
-                        placeholder="Describe your project in detail..."></textarea>
-                    <input id="submit-button" type="button" value="Submit">
+                        placeholder="Describe your project in detail..." maxlength="1020"></textarea>
+                    <input id="submit-button" type="submit" value="Submit">
                     <input type="reset" value="Reset">
                 </form>
                 <div class="contact-info">
@@ -238,7 +249,7 @@
 
     <div id="message-block" class="hidden">
         <div id="message">
-            <p>Уважаемый (ая) <span id="result_name"></span> письмо отправлено</p>
+            <p>Уважаемый (ая) <span id="result_name"></span> Ваше письмо отправлено</p>
             <p>Тема: <span id="result_subject"></span></p>
             <p>Описание: <span id="result_comment"></span></p>  
             <button id="close-button">OK</button>

@@ -14,6 +14,8 @@
     --cbbutton: #c5c5c5;
     --ctbutton: #dedede;
     --wdarkblue: #494e62;
+    --blue: #648BF0;
+    --dblue: #647cbe;
 }
 
 ::-webkit-input-placeholder {color: var(--twhite); opacity:1;}/* webkit */
@@ -31,7 +33,16 @@ body {
     max-width: 1020px;
     margin: 0 auto;
 }
-  
+
+header {
+    position: fixed;
+    height: 89px;
+    background-color: var(--darkblue);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+}
+
 .main-header {
     height: 89px;
     background-color: var(--darkblue);
@@ -99,7 +110,7 @@ body {
 }
 
 .hr {
-    padding: 0;
+    padding: 89px 0 0 0;
     margin: 0;
     width: 100%;
     background-color: var(--ddarkblue);
@@ -109,36 +120,93 @@ body {
 }
 
 .slider {
+    position: relative;
     height: 600px;
     background-color: var(--terrakot);
     border-bottom: 6px solid var(--dterrakot);
     box-sizing: border-box;
+    transition: all 550ms ease-in-out;
 }
 
-.slider > .container {
-    display: flex;
-    align-items: center;
+.slider2 {
+    position: relative;
+    height: 600px;
+    background-color: var(--blue);
+    border-bottom: 6px solid var(--dblue);
+    box-sizing: border-box;
+    transition: all 550ms ease-in-out;
 }
 
-.slider > .container > .chev-h {
+.slider > .container > a > .chev-h {
+    float: left;
     height: 27px;
-    margin: 53px 54px 0 42px;
+    margin: 281px 54px 0 42px;
 }
 
-.slider > .container > .iPhone-v {
-    margin-top: 53px;
-    pointer-events: none;
+.slider > .container > .slide > .iPhone-v {
+    position: relative;
+    top: 53px;
+    left: -539px;
 }
 
-.slider > .container > .iPhone-h {
-    margin-top: 52px;
-    margin-left: 73px;
-    pointer-events: none;
+.slider > .container > .slide > .iPhone-h {
+    position: relative;
+    top: -312px;
+    left: 425px;
 }
 
-.slider > .container > .chev-r {
+.slider > .container > a > .chev-r {
+    float: right;
     height: 27px;
-    margin: 53px 40px 0 55px;
+    margin: 281px 40px 0 55px;
+}
+
+.slider > .container > .slide > .Screen-v {
+    position: relative;
+    top: -29px;
+    left: 11px;
+}
+
+.slider > .container > .slide > .Screen-h {
+    position: relative;
+    top: -104px;
+    left: 173px;
+}
+
+.display-off {
+    z-index: 15;
+}
+
+.slider > .container > .slide > a > .button-IPhone {
+    position: relative;
+    top: -223px;
+    left: -289px;
+    z-index: 10;
+}
+
+.slider > .container > .slide > a > .button-IPhone2 {
+    position: relative;
+    top: -423px;
+    left: -100px;
+    z-index: 10;
+}
+
+.slider > .container > .slide > .slider2-iPhone-l {
+    position: absolute;
+    margin-top: 152px;
+    margin-left: 139.67px;
+}
+
+.slider > .container > .slide > .slider2-iPhone-c {
+    position: absolute;
+    margin-top: 43px;
+    margin-left: 270.47px;
+} 
+
+.slider > .container > .slide > .slider2-iPhone-r {
+    position: absolute;
+    margin-top: 152px;
+    margin-left: 499.83px;
 }
 
 .service {
@@ -237,6 +305,7 @@ body {
     height: 863px;
     background-color: var(--darkblue);
     border-bottom: 6px solid var(--ddarkblue);
+    
 }
 
 .portfolio > .container > .portfolio-head {
@@ -282,6 +351,11 @@ body {
     padding-left: 8px;
 }
 
+.portfolio > .container > .button-array > .button_active {
+    border: 1px solid var(--cbbutton);
+    color: var(--ctbutton);
+}
+
 .portfolio > .container > .button-array > button:hover {
     border: 1px solid var(--cbbutton);
     color: var(--ctbutton);
@@ -296,6 +370,12 @@ body {
     justify-content: center;
     max-height: 611px;
     overflow: hidden;
+}
+
+.portfolio > .container > .gallery > a > .active-gallery {
+    outline: 5px solid var(--terrakot);
+    outline-offset: -5px;
+    transition: all 150ms ease-in-out;
 }
 
 .portfolio > .container > .gallery > a > img:hover {
@@ -437,7 +517,7 @@ body {
     color: var(--wwhite);
 }
 
-.contact > .container > .contact-space > .contact-fields > input[type="button"], input[type="reset"] {
+.contact > .container > .contact-space > .contact-fields > input[type="submit"], input[type="reset"] {
     width: 155px;
     height: 35px;
     margin-left: 100px;
@@ -495,7 +575,7 @@ body {
     text-decoration: underline;
 }
 
-.contact > .container > .contact-space > .contact-fields > input[type="button"]:hover, input[type="reset"]:hover {
+.contact > .container > .contact-space > .contact-fields > input[type="submit"]:hover, input[type="reset"]:hover {
     cursor: pointer;
     filter: drop-shadow(0 0 5px var(--dwhite))
 }

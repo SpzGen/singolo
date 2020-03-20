@@ -22,10 +22,11 @@
 ::-moz-placeholder          {color: var(--twhite); opacity:1;}/* Firefox 19+ */
 :-moz-placeholder           {color: var(--twhite); opacity:1;}/* Firefox 18- */
 :-ms-input-placeholder      {color: var(--twhite); opacity:1;}/* IE */
-  
+
 body {
     margin: 0;
     font-family: "Lato", Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -305,7 +306,6 @@ header {
     height: 863px;
     background-color: var(--darkblue);
     border-bottom: 6px solid var(--ddarkblue);
-    
 }
 
 .portfolio > .container > .portfolio-head {

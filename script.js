@@ -10,6 +10,29 @@ const BUTTON_ARTWORK = document.getElementById('button-Artwork');
 const BUTTON_SLIDER_LEFT = document.getElementsByClassName('chev-h');
 const Random = (a, b) => Math.random()-0.5;
 
+// Скрол документа
+
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const curPos = window.scrollY;
+    const divs = document.querySelectorAll('body > div');
+    const links = document.querySelectorAll('#main-nav a');
+
+    divs.forEach((el) => {
+        if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+            links.forEach((a) => {
+                a.classList.remove('active-nav');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active-nav'); 
+                }
+            })
+        }
+    });
+}
+
+
+
 // Подсветка меню
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('active-nav'));
@@ -19,8 +42,8 @@ MENU.addEventListener('click', (event) => {
 document.querySelectorAll('li a').forEach(li => 
     li.addEventListener('click', () => {
       setTimeout(() => {
-        window.scrollBy(0, -40)
-      }, 0)
+        window.scrollBy(0, 0)
+      }, 0);
     })
 );
 

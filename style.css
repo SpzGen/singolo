@@ -23,6 +23,10 @@
 :-moz-placeholder           {color: var(--twhite); opacity:1;}/* Firefox 18- */
 :-ms-input-placeholder      {color: var(--twhite); opacity:1;}/* IE */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Lato", Arial, sans-serif;

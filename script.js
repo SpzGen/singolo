@@ -39,14 +39,6 @@ MENU.addEventListener('click', (event) => {
     event.target.classList.add('active-nav');
 });
 
-document.querySelectorAll('li a').forEach(li => 
-    li.addEventListener('click', () => {
-      setTimeout(() => {
-        window.scrollBy(0, 0)
-      }, 0);
-    })
-);
-
 // Кнопки слайдера
 let SlideId = 1;
 showSliders(SlideId);
@@ -101,40 +93,52 @@ ARRAY_BUTTON.addEventListener('click', (event) => {
 
 // Сортировка РАНДОМОМ
 BUTTON_ALL.addEventListener('click', () => {
-    let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
-    let arrImgSrcMix = arrImg.map(e => e.src).sort(Random);
-    arrImg.map((e, i) => e.src = arrImgSrcMix[i]);
+    if(!(event.target.classList.contains('button_active'))){
+        let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
+        let arrImgSrcMix = arrImg.map(e => e.src).sort(Random);
+        arrImg.map((e, i) => e.src = arrImgSrcMix[i]);
+    }
 });
 
 // Сортировка РАНДОМОМ
 BUTTON_WEB_DESING.addEventListener('click', () => {
-    let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
-    let arrImgSrcMix = arrImg.map(e => e.src).sort(Random);
-    arrImg.map((e, i) => e.src = arrImgSrcMix[i]);
+    if(!(event.target.classList.contains('button_active'))){
+        let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
+        let arrImgSrcMix = arrImg.map(e => e.src).sort(Random);
+        arrImg.map((e, i) => e.src = arrImgSrcMix[i]);
+    }
 });
 
 // Картинки двигаются назад по 1
 BUTTON_GRAPHIC_DESIGN.addEventListener('click', () => {
-    let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
-    let arrImgSrc = arrImg.map(e => e.src)
-    let arrImgSrcCut = arrImgSrc.shift();
-    let arrImgSrcNew = arrImgSrc.concat(arrImgSrcCut);
-    arrImg.map((e, i) => e.src = arrImgSrcNew[i]);
+    if(!(event.target.classList.contains('button_active'))){
+        let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
+        let arrImgSrc = arrImg.map(e => e.src)
+        let arrImgSrcCut = arrImgSrc.shift();
+        let arrImgSrcNew = arrImgSrc.concat(arrImgSrcCut);
+        arrImg.map((e, i) => e.src = arrImgSrcNew[i]);
+    }
 });
 
 // Картинки двигаются вперед по 1
 BUTTON_ARTWORK.addEventListener('click', () => {
-    let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
-    let arrImgSrc = arrImg.map(e => e.src)
-    let arrImgSrcCut = arrImgSrc.pop().split();
-    let arrImgSrcNew = arrImgSrcCut.concat(arrImgSrc);
-    arrImg.map((e, i) => e.src = arrImgSrcNew[i]);
+    if(!(event.target.classList.contains('button_active'))){
+        let arrImg = Array.from(GALLERY.getElementsByTagName('img'));
+        let arrImgSrc = arrImg.map(e => e.src)
+        let arrImgSrcCut = arrImgSrc.pop().split();
+        let arrImgSrcNew = arrImgSrcCut.concat(arrImgSrc);
+        arrImg.map((e, i) => e.src = arrImgSrcNew[i]);
+    }
 });
 
 // Подсветка картинок гарелеи
 GALLERY.addEventListener('click', (event) => {
-    GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active-gallery'));
-    event.target.classList.add('active-gallery');
+    if(!(event.target.classList.contains('active-gallery'))){
+        GALLERY.querySelectorAll('img').forEach(el => el.classList.remove('active-gallery'));
+        event.target.classList.add('active-gallery');
+    } else {
+        event.target.classList.remove('active-gallery');
+    }
 });
 
 //Кнопка формирования модального окна
@@ -167,6 +171,7 @@ CLOSE_BUTTON.addEventListener('click', (event) => {
     document.getElementById('result_subject').innerText = '';
     document.getElementById('contact-comment').innerText = '';   
     document.getElementById('message-block').classList.add('hidden');
+    document.getElementById('forms').reset();
 });
 
 

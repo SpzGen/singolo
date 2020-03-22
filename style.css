@@ -28,14 +28,14 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: "Lato", Arial, sans-serif;
     scroll-behavior: smooth;
+    width: 1020px;
 }
 
 .container {
-    width: 100%;
-    max-width: 1020px;
+    width: 1020px;
     margin: 0 auto;
 }
 
@@ -53,12 +53,15 @@ header {
     background-color: var(--darkblue);
 }
 
-.main-header > .container {
+.main-header {
     display: flex;
     align-items: center;
+    max-width: 1020px;
+    margin: 0 auto;
 }
 
 .logo {
+    height: 89px;
     margin-left: 40px;
     font-size: 25px;
     line-height: 45px;
@@ -522,7 +525,7 @@ header {
 }
 
 .contact > .container > .contact-space > .contact-fields > input[type="submit"], input[type="reset"] {
-    width: 155px;
+    max-width: 155px;
     height: 35px;
     margin-left: 100px;
     border-radius: 5px;
@@ -545,7 +548,7 @@ header {
 
 .contact > .container > .contact-space > .contact-info > .contact-info-text {
     margin-top: 10px;
-    width: 300px;
+    width: auto;
     height: 175px;
     font-size: 12px;
     line-height: 22px;
@@ -649,4 +652,142 @@ header {
     text-decoration: none;
     padding: 20px;    
     transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 auto;
+        width: 768px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .slider {
+        height: 444px;
+        border-bottom: 4.52px solid var(--dterrakot);
+    }
+
+    .slider > .container > .slide > .iPhone-v {
+        position: relative;
+        top: 46px;
+        left: -401px;
+        height: 344px;
+        width: 162px;
+    }
+
+    .slider > .container > .slide > .iPhone-h {
+        position: relative;
+        top: -209px;
+        left: 326px;
+        height: 162px;
+        width: 344px;
+    }
+
+    .slider > .container > .slide > .Screen-v {
+        position: relative;
+        top: -12px;
+        left: -16px;
+        height: 240.82px;
+        width: 130.82px;
+    }
+    
+    .slider > .container > .slide > .Screen-h {
+        position: relative;
+        top: -68px;
+        left: 120px;
+        height: 130.82px;
+        width: 240.82px;
+    }
+
+    .service > .container > .features {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 39px 53px;
+        margin: 0 40px 0 41px;
+    }
+
+    .service > .container > .Service-text {
+        width: 687px;
+    }
+
+    .portfolio > .container > .gallery {
+        padding-top: 19px;
+        padding-bottom: 10px;
+        display: grid;
+        grid-template:  repeat(4, 187px)/repeat(3, 220px);
+        grid-gap: 20px 20px;
+        justify-content: center;
+        max-height: 611px;
+        overflow: hidden;
+    }
+
+    .contact > .container > .contact-space {
+        display: grid;
+        grid-template-columns: 422px 221px;
+        grid-column-gap: 20px; 
+        padding-top: 43px;
+        padding-left: 40px;
+    }
+
+    .contact > .container > .contact-space > .contact-fields > input[type="text"], input[type="email"] {
+        width: 422px;
+    }
+
+    .contact > .container > .contact-space > .contact-fields > textarea[type="text"] {
+        width: 422px;
+    }
+
+    .about_us > .container > .about_us_we {
+        grid-template-columns: repeat(3, 219px);
+    }
+
+    .about_us > .container > .about_us_we > .about_us_we1 > .about_us_we_foto {
+        width: 100%;
+        height: 100%
+    }
+
+
+    .slider > .container > .slide > a > .button-IPhone {
+        top: -142px;
+        left: -201px;
+        width: 31px;
+    }
+    
+    .slider > .container > .slide > a > .button-IPhone2 {
+        top: -283px;
+        left: -50px;
+        width: 31px;
+    }
+
+    .slider > .container > a > .chev-h {
+        margin: 212px 54px 0 42px;
+    }
+    .slider > .container > a > .chev-r {
+        margin: 212px 54px 0 42px;
+    }
+
+    .slider > .container > .slide > .slider2-iPhone-l {
+        margin-top: 122px;
+        margin-left: 95px;
+        width: 110px;
+        height: 220px;
+    }
+    
+    .slider > .container > .slide > .slider2-iPhone-c {
+        width: 178px;
+        height: 359px;
+        margin-top: 45px;
+        margin-left: 186px;
+    } 
+    
+    .slider > .container > .slide > .slider2-iPhone-r {
+        margin-top: 122px;
+        margin-left: 347px;
+        width: 110px;
+        height: 220px;
+    }
 }

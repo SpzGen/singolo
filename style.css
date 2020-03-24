@@ -624,8 +624,6 @@ header {
     filter: drop-shadow(0px 0px 1px var(--dwhite))
 }
 
-
-
 #message-block {
     position: fixed;
     width: 100%;
@@ -761,20 +759,43 @@ header {
         overflow: hidden;
     }
 
+    .contact {
+        height: 625px;
+    }
+
+    .contact > .container > .contact-head {
+        padding-top: 52px;
+        width: 695px;
+        margin: auto;
+        padding-left: 0;
+    }
+
+    .contact > .container > .contact-text {
+        width: 695px;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .contact > .container > .contact-space {
         display: grid;
-        grid-template-columns: 422px 221px;
-        grid-column-gap: 20px; 
-        padding-top: 43px;
-        padding-left: 40px;
+        grid-template-columns: 442px 221px;
+        grid-column-gap: 30px;
+        padding-top: 23px;
+        justify-content: center;
+        padding-left: 0;
     }
 
     .contact > .container > .contact-space > .contact-fields > input[type="text"], input[type="email"] {
-        width: 422px;
+        width: 412px;
+        height: 38px;
+        padding: 0 15px;
     }
 
     .contact > .container > .contact-space > .contact-fields > textarea[type="text"] {
-        width: 422px;
+        width: 412px;
+        padding: 10px 15px 15px 15px;
+        height: 159px;
     }
 
     .about_us {

@@ -1153,4 +1153,16 @@ header {
         margin-bottom: 15px;
     }
 
+    .contact > .container > .contact-space > .contact-info > .contact-info-text {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .footer > .container > .footer_pravo {
+        display: none;
+    }
+
+    .footer > .container > .footer-about_us_we_web {
+        margin: 0 auto;
+    }
 }

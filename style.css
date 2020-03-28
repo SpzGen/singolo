@@ -879,6 +879,7 @@ header {
 
 
 @media (max-width: 767px)  {
+
     .main-header {
         display: grid;
         grid-template-columns: 35% 65%;
@@ -890,9 +891,11 @@ header {
     }
 
     .slider {
-        height: 218px;
-        border-bottom: 3px solid var(--dterrakot);
-        text-align: center;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        padding-bottom: 58.8%;
+        height: 0;
     }
 
     .slider2 {
@@ -900,58 +903,90 @@ header {
     }
 
     .slider > .container > a > .chev-h {
-        margin: 98px 16px 0 14px;
+        position: absolute;
+        left: 5.5%;
+        margin: 0;
+        top: calc(50% + -35px / 2 + 3px);
     }
+
     .slider > .container > a > .chev-r {
-        margin: 98px 14px 0 16px;
+        position: absolute;
+        right: 5.5%;
+        margin: 0;
+        top: calc(50% + -35px / 2 + 3px);
     }
-
-
-
 
     .slider > .container > .slide > .iPhone-v {
-        position: relative;
-        top: 11px;
-        left: -60px;
-        height: 187px;
-        width: 88px;
+        position: absolute;
+        width: 21.176647%;
+        height: 77.272%;
+        top: 8.9%;
+        left: 17.9%;
     }
 
     .slider > .container > .slide > .iPhone-h {
-        position: relative;
-        top: -34px;
-        left: -60px;
-        height: 88px;
-        width: 187px;
+        position: absolute;
+        width: 45%;
+        height: 36%;
+        top: 29.5%;
+        left: 41.701%;
     }
 
     .slider > .container > .slide > .Screen-v {
-        position: relative;
-        top: -21px;
-        left: 152px;
-        height: 131px;
-        width: 71px;
+        position: absolute;
+        width: 17.1%;
+        height: 54.6%;
+        top: 18.8%;
+        left: 18.9%;
     }
     
     .slider > .container > .slide > .Screen-h {
-        position: relative;
-        top: -47px;
-        left: 188px;
-        height: 71px;
-        width: 131px;
+        position: absolute;
+        height: 29.4%;
+        width: 32%;
+        top: 31%;
+        left: 46.8%;
     }
 
 
     .slider > .container > .slide > a > .button-IPhone {
-        top: -3px;
-        left: -311px;
-        width: 15px;
+        position: absolute;
+        width: 3.82%;
+        height: 6.9%;
+        top: 74%;
+        left: 25.51%;
     }
     
     .slider > .container > .slide > a > .button-IPhone2 {
-        top: -75px;
-        left: -265px;
-        width: 15px;
+        position: absolute;
+        width: 4%;
+        height: 6.5%;
+        top: 42.5%;
+        left: 42.4%;
+    }
+
+    .slider > .container > .slide > .slider2-iPhone-l {
+        position: absolute;
+        width: 14.4%;
+        height: 48.5%;
+        top: 31%;
+        left: 27.2%;
+    }
+
+    .slider > .container > .slide > .slider2-iPhone-c {
+        position: absolute;
+        width: 23.5%;
+        height: 79%;
+        top: 13.8%;
+        left: 39.4%;
+    }
+
+    .slider > .container > .slide > .slider2-iPhone-r {
+        position: absolute;
+        width: 14.4%;
+        height: 48.5%;
+        top: 31%;
+        left: 60.6%;
     }
 
 
@@ -987,53 +1022,65 @@ header {
         height: 42px;
     }
     
+    .service {
+        height: auto;
+        border-bottom: 4.5px solid var(--white)
+    }
+
     .service > .container > .features {
-        grid-template-columns: 300px;
-        margin: auto;
-        grid-gap: 0 0;
-        max-width: fit-content;
+        grid-template-columns: 100%;
+        grid-gap: 20px 0;
+        padding: 0 20px 20px 20px;
     }
 
     .service > .container > .Service-text {
-        width: 315px;
-        margin: 18px auto 45px auto;
-        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0 20px 0;
     }
 
     .service > .container > .Service-head {
         padding: 40px 0 0 0;
-        width: 315px;
+        width: 90%;
         margin: auto;
     }
 
+    .portfolio {
+        height: auto;
+        background-color: var(--darkblue);
+        border-bottom: 4.5px solid var(--ddarkblue);
+    }
 
+    .portfolio > .container > .portfolio-head {
+        padding: 40px 0 0 0;
+        width: 90%;
+        margin: auto;
+    }
 
+    .portfolio > .container > .portfolio-text {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0 20px 0;
+    }
 
     .portfolio > .container > .button-array {
         padding: 0;
         margin: 0 auto;
-        width: 315px;
+        width: 90%;
     }
 
     .portfolio > .container > .gallery {
-        grid-template: repeat(6, 128px)/repeat(2, 151px);
-        grid-gap: 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 15px 15px;
+        padding: 42px 6%;
+        max-height: none;
+    }
+
+    .portfolio > .container > .gallery > a > img{
         width: 100%;
         height: 100%;
     }
-
-    .portfolio > .container > .portfolio-head {
-        width: 315px;
-        margin: auto;
-        padding: 59px 0 0 0;
-    }
-
-    .portfolio > .container > .portfolio-text {
-        width: 315px;
-        margin: 24px auto 12px auto;
-        padding: 0;
-    }
-
 
 
     .about_us > .container > .about_us_we {

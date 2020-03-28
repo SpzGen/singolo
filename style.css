@@ -46,6 +46,7 @@ header {
     width: 100%;
     margin: 0 auto;
     z-index: 100;
+    user-select: none;
 }
 
 .main-header {
@@ -93,7 +94,11 @@ header {
     list-style-type: none;
 }
 
-.main-nav > ul > li:not(:last-child):after {
+.icon {
+    display: none;
+}
+
+.main-nav > ul > li:not(:nth-last-child(-n+2)):after {
     content: '•';
     font-size: 5px;
     color: var(--wdarkblue);
@@ -377,6 +382,10 @@ header {
     justify-content: center;
     max-height: 611px;
     overflow: hidden;
+}
+
+.portfolio > .container > .gallery > a {
+    box-sizing: border-box;
 }
 
 .portfolio > .container > .gallery > a > .active-gallery {
@@ -664,7 +673,6 @@ header {
         margin: 0 auto;
     }
 
-
     .slider {
         height: 444px;
         border-bottom: 4.52px solid var(--dterrakot);
@@ -867,4 +875,223 @@ header {
         width: 110px;
         height: 220px;
     }
+}
+
+
+@media (max-width: 767px)  {
+    .main-header {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        height: 71px;
+    }
+    .hr {
+        height: 3px;
+        padding: 74px 0 0 0;
+    }
+
+    .slider {
+        height: 218px;
+        border-bottom: 3px solid var(--dterrakot);
+        text-align: center;
+    }
+
+    .slider2 {
+        border-bottom: 4.52px solid var(--dblue);
+    }
+
+    .slider > .container > a > .chev-h {
+        margin: 98px 16px 0 14px;
+    }
+    .slider > .container > a > .chev-r {
+        margin: 98px 14px 0 16px;
+    }
+
+
+
+
+    .slider > .container > .slide > .iPhone-v {
+        position: relative;
+        top: 11px;
+        left: -60px;
+        height: 187px;
+        width: 88px;
+    }
+
+    .slider > .container > .slide > .iPhone-h {
+        position: relative;
+        top: -34px;
+        left: -60px;
+        height: 88px;
+        width: 187px;
+    }
+
+    .slider > .container > .slide > .Screen-v {
+        position: relative;
+        top: -21px;
+        left: 152px;
+        height: 131px;
+        width: 71px;
+    }
+    
+    .slider > .container > .slide > .Screen-h {
+        position: relative;
+        top: -47px;
+        left: 188px;
+        height: 71px;
+        width: 131px;
+    }
+
+
+    .slider > .container > .slide > a > .button-IPhone {
+        top: -3px;
+        left: -311px;
+        width: 15px;
+    }
+    
+    .slider > .container > .slide > a > .button-IPhone2 {
+        top: -75px;
+        left: -265px;
+        width: 15px;
+    }
+
+
+
+    .icon {
+        display: unset;
+        text-decoration: none;
+        color: var(--dwhite);
+        float: left;
+    }
+
+    .main-nav > ul > li:not(:last-child){
+        display: none;
+    }
+
+    .main-nav {
+        display: grid;
+        grid-column: 1 / 1;
+        grid-row: 1/1;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        display: grid;
+        grid-column: 2 / 2;
+        grid-row: 1/1;
+        margin: 0;
+        align-self: center;
+    }
+
+    .logo {
+        height: 42px;
+    }
+    
+    .service > .container > .features {
+        grid-template-columns: 300px;
+        margin: auto;
+        grid-gap: 0 0;
+        max-width: fit-content;
+    }
+
+    .service > .container > .Service-text {
+        width: 315px;
+        margin: 18px auto 45px auto;
+        height: auto;
+    }
+
+    .service > .container > .Service-head {
+        padding: 40px 0 0 0;
+        width: 315px;
+        margin: auto;
+    }
+
+
+
+
+    .portfolio > .container > .button-array {
+        padding: 0;
+        margin: 0 auto;
+        width: 315px;
+    }
+
+    .portfolio > .container > .gallery {
+        grid-template: repeat(6, 128px)/repeat(2, 151px);
+        grid-gap: 20px 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio > .container > .portfolio-head {
+        width: 315px;
+        margin: auto;
+        padding: 59px 0 0 0;
+    }
+
+    .portfolio > .container > .portfolio-text {
+        width: 315px;
+        margin: 24px auto 12px auto;
+        padding: 0;
+    }
+
+
+
+    .about_us > .container > .about_us_we {
+        grid-template-columns: 315px;
+        padding-top: 28px;
+        grid-gap: 15px 15px;
+    }
+
+    .about_us > .container > .about_us_head {
+        width: 315px;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-top: 56px;
+    }
+
+    .about_us > .container > .about_us_text {
+        width: 315px;
+        margin: 0 auto;
+        padding-top: 18px;
+        padding-left: 0;
+    }
+
+    .contact > .container > .contact-head {
+        padding-top: 52px;
+        width: 315px;
+        margin: auto;
+        padding-left: 0;
+    }
+
+    .contact > .container > .contact-text {
+        width: 315px;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact > .container > .contact-space {
+        display: grid;
+        grid-template-columns: 315px;
+        grid-column-gap: 30px;
+        padding-top: 23px;
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+
+
+    .contact > .container > .contact-space > .contact-fields > input[type="text"], input[type="email"] {
+        width: 285px;
+        height: 38px;
+        padding: 0 15px;
+    }
+
+    .contact > .container > .contact-space > .contact-fields > textarea[type="text"] {
+        width: 285px;
+        padding: 10px 15px 15px 15px;
+        height: 159px;
+    }
+
+
 }

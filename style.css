@@ -889,6 +889,10 @@ header {
         height: 3px;
         padding: 74px 0 0 0;
     }
+    
+    .logo {
+        margin-left: 9%;
+    }
 
     .slider {
         position: relative;
@@ -1082,36 +1086,43 @@ header {
         height: 100%;
     }
 
+    .about_us {
+        height: auto;
+    }
 
     .about_us > .container > .about_us_we {
-        grid-template-columns: 315px;
-        padding-top: 28px;
+        grid-template-columns: 90%;
+        padding: 28px 0;
         grid-gap: 15px 15px;
     }
 
     .about_us > .container > .about_us_head {
-        width: 315px;
+        width: 90%;
         margin: 0 auto;
         padding-left: 0px;
         padding-top: 56px;
     }
 
     .about_us > .container > .about_us_text {
-        width: 315px;
+        width: 90%;
         margin: 0 auto;
         padding-top: 18px;
         padding-left: 0;
     }
 
+    .contact {
+        height: auto;
+    }
+
     .contact > .container > .contact-head {
         padding-top: 52px;
-        width: 315px;
+        width: 90%;
         margin: auto;
         padding-left: 0;
     }
 
     .contact > .container > .contact-text {
-        width: 315px;
+        width: 90%;
         margin: auto;
         padding-left: 0;
         padding-right: 0;
@@ -1119,26 +1130,27 @@ header {
 
     .contact > .container > .contact-space {
         display: grid;
-        grid-template-columns: 315px;
+        grid-template-columns: 1fr;
         grid-column-gap: 30px;
-        padding-top: 23px;
+        padding: 23px 5% 0 5%;
         justify-content: center;
-        padding-left: 0;
     }
     
-
-
     .contact > .container > .contact-space > .contact-fields > input[type="text"], input[type="email"] {
-        width: 285px;
+        width: calc(100% + -65px / 2 + 3px);
         height: 38px;
         padding: 0 15px;
     }
 
     .contact > .container > .contact-space > .contact-fields > textarea[type="text"] {
-        width: 285px;
+        width: calc(100% + -65px / 2 + 3px);
         padding: 10px 15px 15px 15px;
         height: 159px;
     }
 
+    .contact > .container > .contact-space > .contact-fields > input[type="submit"], input[type="reset"] {
+        margin-left: 25%;
+        margin-bottom: 15px;
+    }
 
 }

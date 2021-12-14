@@ -26,7 +26,7 @@
         <!-- </div> -->
     </header>
     <hr class="hr" noshade>
-
+    <div id="twin-chat-container"></div> 
     <div class="slider" id="home">
         <div class="container">
             <a onclick="Click_b(-1)"><img class="chev-h" src="assets/chev-h.png" alt="chev"></a>
@@ -264,6 +264,24 @@
 
 
 <script src="script.js"></script>
+
+<script> 
+    (function () { 
+      const script = document.createElement('script'); 
+      script.async = true; 
+      script.src = 'https://modern.twin24.ai/manual.umd.min.js'; 
+      document.head.appendChild(script); 
+      script.onload = () => { 
+        TwinChat.init('#twin-chat-container', { 
+          chatId: 'e68dfc87-5845-4d56-bd54-7ab5c606b0e3', 
+        }).then(client => window.TwinClient = client); 
+      }; 
+    })(); 
+</script>
+
+
+
+
 </body>
 
 </html>
